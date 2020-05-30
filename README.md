@@ -1,6 +1,6 @@
-# Bash calculator
+# CMD calculator
 
-It is a simple bash calculator written in C++. Here will be the next operations:
+It is a simple CMD calculator written in C++. Here will be the next operations:
 
 * Addition operator
 
@@ -18,7 +18,7 @@ It is a simple bash calculator written in C++. Here will be the next operations:
 
 * Cube Root of a value
 
-* Factorial
+* Factorial of a value
 
 * Subtraction with percents
 
