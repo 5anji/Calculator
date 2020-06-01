@@ -7,10 +7,11 @@ void main_switcher() {
   string chk_st;
   int chk_int;
   
+  LOOP2:
   initialize();
 
   do {
-    LOOP:
+    LOOP1:
     cout << " 1 - Addition" << endl;
     cout << " 2 - Subtraction" << endl;
     cout << " 3 - Multiplication" << endl;
@@ -26,14 +27,21 @@ void main_switcher() {
     cout << "13 - Sine" << endl;
     cout << "14 - Cosine" << endl;
     cout << "15 - Tangent" << endl;
+    cout << " C - Clear all results and start new session" << endl;
     cout << " 0 - Exit and show result" << endl;
     cout << "SELECT -->> ";
     cin >> chk_st;
 
-    if (check_sintax_error_1(chk_st))  chk_int = stoi(chk_st); else {
+    if (check_sintax_error_1(chk_st)) {
+      chk_int = stoi(chk_st);
+    } else if (toupper(chk_st[0]) == 'C') {
+      Clear_All();
+      system("clear");
+      goto LOOP2;
+    } else {
       cout << "\033[0;31mFATAL ERROR. Select Again.(needs int, detected char type)\033[0m" << endl;
-      goto LOOP;
-    } 
+      goto LOOP1;
+    }
     
     system("clear");
     history();
@@ -83,6 +91,9 @@ void main_switcher() {
       break;
     case 15:
       Tangent();
+      break;
+    case 2808:
+      easter_egg();
       break;
     case 0:
       break;

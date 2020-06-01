@@ -10,79 +10,121 @@ int counter = 0;
 
 // Case 1:
 void Addition() {
+  string str;
   float y;
 
+  LOOP:
   cout << x << " + ";
-  cin >> y;
+  cin >> str;
+
+  if (check_sintax_error_2(str)) y = stof(str); else {
+    cout << "\033[0;31mFATAL ERROR. Select Again.(needs int, detected char type)\033[0m" << endl;
+    goto LOOP;
+  }
 
   x += y;
   hist[counter] = x;
-  cout << " == " << x << endl;
+  cout << "        == " << x << endl;
   counter++;
 }
 
 // Case 2:
 void Subtraction() {
+  string str;
   float y;
 
+  LOOP:
   cout << x << " - ";
-  cin >> y;
+  cin >> str;
+
+  if (check_sintax_error_2(str)) y = stof(str); else {
+    cout << "\033[0;31mFATAL ERROR. Select Again.(needs int, detected char type)\033[0m" << endl;
+    goto LOOP;
+  }
 
   x -= y;
   hist[counter] = x;
-  cout << " == " << x << endl;
+  cout << "        == " << x << endl;
   counter++;
 }
 
 // Case 3:
 void Multiplication() {
+  string str;
   float y;
 
+  LOOP:
   cout << x << " * ";
-  cin >> y;
+  cin >> str;
+
+  if (check_sintax_error_2(str)) y = stof(str); else {
+    cout << "\033[0;31mFATAL ERROR. Select Again.(needs int, detected char type)\033[0m" << endl;
+    goto LOOP;
+  }
 
   x *= y;
   hist[counter] = x;
-  cout << " == " << x << endl;
+  cout << "        == " << x << endl;
   counter++;
 }
 
 // Case 4:
 void Division() {
+  string str;
   float y;
 
+  LOOP:
   cout << x << " / ";
-  cin >> y;
+  cin >> str;
+
+  if (check_sintax_error_2(str)) y = stof(str); else {
+    cout << "\033[0;31mFATAL ERROR. Select Again.(needs int, detected char type)\033[0m" << endl;
+    goto LOOP;
+  }
 
   x /= y;
   hist[counter] = x;
-  cout << " == " << x << endl;
+  cout << "        == " << x << endl;
   counter++;
 }
 
 // Case 5:
 void Modulus() {
+  string str;
   float y;
 
+  LOOP:
   cout << x << " % ";
-  cin >> y;
+  cin >> str;
+
+  if (check_sintax_error_2(str)) y = stof(str); else {
+    cout << "\033[0;31mFATAL ERROR. Select Again.(needs int, detected char type)\033[0m" << endl;
+    goto LOOP;
+  }
 
   x = fmod(x, y);
   hist[counter] = x;
-  cout << " == " << x << endl;
+  cout << "        == " << x << endl;
   counter++;
 }
 
 // Case 6:
 void Exponent() {
+  string str;
   float y;
 
+  LOOP:
   cout << x << " ^ ";
-  cin >> y;
+  cin >> str;
+
+  if (check_sintax_error_2(str)) y = stof(str); else {
+    cout << "\033[0;31mFATAL ERROR. Select Again.(needs int, detected char type)\033[0m" << endl;
+    goto LOOP;
+  }
 
   x = pow(x, y);
   hist[counter] = x;
-  cout << " == " << x << endl;
+  cout << "        == " << x << endl;
   counter++;
 }
 
@@ -122,14 +164,21 @@ void Factorial() {
 
 // Case 10:
 void Subtraction_Percents() {
+  string str;
   float y;
 
+  LOOP:
   cout << x << " -(%) ";
-  cin >> y;
+  cin >> str;
+
+  if (check_sintax_error_2(str)) y = stof(str); else {
+    cout << "\033[0;31mFATAL ERROR. Select Again.(needs int, detected char type)\033[0m" << endl;
+    goto LOOP;
+  }
 
   x *= (100 - y)/100;
   hist[counter] = x;
-  cout << " == " << x << endl;
+  cout << "        == " << x << endl;
   counter++;
 }
 
@@ -139,7 +188,7 @@ void Natural_Logarithm() {
 
   x = log(x);
   hist[counter] = x;
-  cout << "ln(" << y << ") == " << x << endl;
+  cout << "        ln(" << y << ") == " << x << endl;
   counter++;
 }
 
@@ -149,7 +198,7 @@ void Base10_Logarithm() {
 
   x = log10(x);
   hist[counter] = x;
-  cout << "log10(" << y << ") == " << x << endl;
+  cout << "        log10(" << y << ") == " << x << endl;
   counter++;
 }
 
@@ -159,7 +208,7 @@ void Sine() {
 
   x = sin(x);
   hist[counter] = x;
-  cout << "sin(" << y << ") == " << x << endl;
+  cout << "        sin(" << y << ") == " << x << endl;
   counter++;
 }
 
@@ -169,7 +218,7 @@ void Cosine() {
 
   x = cos(x);
   hist[counter] = x;
-  cout << "cos(" << y << ") == " << x << endl;
+  cout << "        cos(" << y << ") == " << x << endl;
   counter++;
 }
 
@@ -179,6 +228,12 @@ void Tangent() {
 
   x = tan(x);
   hist[counter] = x;
-  cout << "tan(" << y << ") == " << x << endl;
+  cout << "        tan(" << y << ") == " << x << endl;
   counter++;
+}
+
+// Case 16:
+void Clear_All() {
+  x = 0;
+  counter = 0;
 }

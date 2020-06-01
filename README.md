@@ -32,4 +32,18 @@ It is a simple CMD calculator written in C++. Here are the next operations:
 
 * Tangent of a value
 
-#### Wait for updates on Github
+# Release Patch 1.0.0
+
+In release was added the next things:
+
+* Syntax error check-ers at all input sequences
+
+* Repaired some options
+
+* Little aligning
+
+* Added "C" option that starts a new calculating session
+
+Next patch: 
+
+* Coloured output and aligning
