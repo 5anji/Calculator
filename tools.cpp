@@ -1,5 +1,6 @@
 #include <iostream>
 
+#include "col_form.h"
 #include "common.h"
 using namespace std;
 
@@ -24,7 +25,7 @@ bool check_sintax_error_2(string str) {
 }
 
 void easter_egg() {
-  cout << "You found Easter Egg" << endl;
+  cout << Blue("You found Easter Egg") << endl;
   system("xdg-open https://img.wallpapersafari.com/desktop/1920/1080/4/63/nwr83A.jpg");
 }
 
@@ -35,7 +36,7 @@ void initialize() {
   cin >> str;
 
   if (check_sintax_error_2(str)) x = stof(str); else {
-    cout << "\033[0;31mFATAL ERROR. Select Again.(needs int, detected char type)\033[0m" << endl;
+    cout << Underline(Bold(Red("FATAL ERROR. Select Again.(needs int, detected char type)"))) << endl;
     goto LOOP;
   }
   
@@ -44,10 +45,10 @@ void initialize() {
 }
 
 void history() {
-  cout << "History:" << endl << endl;
+  cout << Bold(Orange("History:")) << endl << endl;
 
   for (int i = 0; i < counter; i++) {
-    if (i == counter - 1) cout << "Final result: ";
+    if (i == counter - 1) cout << Purple("Final result: ");
     cout << "\t" << hist[i] << endl;
     
   }

@@ -32,6 +32,30 @@ It is a simple CMD calculator written in C++. Here are the next operations:
 
 * Tangent of a value
 
+# Patch 1.1
+
+* Added color formatting commands: 
+
+  * Black
+
+  * Red
+
+  * Green
+
+  * Orange
+
+  * Blue
+
+  * Purple
+
+  * Cyan
+
+  * Gray
+
+  * Bold
+
+  * Underline
+
 # Release Patch 1.0.0
 
 In release was added the next things:
