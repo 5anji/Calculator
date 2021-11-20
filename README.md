@@ -1,6 +1,6 @@
-# CMD calculator
+# CLI calculator
 
-It is a simple CMD calculator written in C++. Here are the next operations:
+It is a simple CLI calculator written in C++. Here are the next operations:
 
 * Addition operator
 
